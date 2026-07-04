@@ -1,3 +1,5 @@
-statefullset:
- imageURL: 9347673562/mongodb:v1
- imageVersion: v1
+apiVersion: v2
+name: mongodb
+version: 1.0.0 # chart version
+description: mongodb helm chart description
+appVersion: v1 # application version

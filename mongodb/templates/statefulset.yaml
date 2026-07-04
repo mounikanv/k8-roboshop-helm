@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -25,11 +24,11 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: {{ .Value.statefulset.imageURL}}:{{ .Value.statefulset.imageVersion }}
+        image: "{{ .Values.statefulset.imageURL}}:{{ .Values.statefulset.imageVersion }}"
         volumeMounts:
         - name: mongodb-data
           mountPath: /data/db
-          # This is nothing but PVC, you can directly create here
+  # This is nothing but PVC, you can directly create here
   volumeClaimTemplates:
   - metadata:
       name: mongodb-data
@@ -38,4 +37,4 @@ spec:
       storageClassName: "roboshop-ebs"
       resources:
         requests:
-          storage: 2Gi      
+          storage: 2Gi
