@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: {{ .values.statefulset.imageURL }}:{{ .values.statefulset.imageversion }}
+        image: {{ .values.statefulset.imageURL}}:{{ .values.statefulset.imageversion }}
         envFrom:
         - secretRef:
             name: mysql
