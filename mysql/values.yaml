@@ -1,3 +1,2 @@
 statefulset:
-  statefulset:
   imageURL: 9347673562/mysql:v1
